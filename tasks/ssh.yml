@@ -1,0 +1,22 @@
+- name: Stop service systemd-resolved
+  ansible.builtin.service:
+    name: systemd-resolved
+    state: stopped
+
+- name: Enable service httpd, and not touch the state
+  ansible.builtin.service:
+    name: systemd-resolved
+    enabled: no
+
+- name: Remove file resolv.conf
+  ansible.builtin.file:
+    path: /etc/resolv.conf
+    state: absent
+
+- name: ssh | Ensure ssh configuration
+  template:
+    src: dashboards/dashboards.yaml
+    dest: "/resolv.conf"
+    owner: root
+    group: root
+    mode: 0644
