@@ -19,8 +19,8 @@
 - name: ssh | Ensure ssh configuration
   become: yes
   template:
-    src: dashboards/dashboards.yaml
-    dest: "/resolv.conf"
+    src: resolv.j2
+    dest: "/etc/resolv.conf"
     owner: root
     group: root
     mode: 0644
