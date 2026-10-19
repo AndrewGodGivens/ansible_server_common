@@ -6,10 +6,10 @@ server_common_data:
   packages:
     - atop
     - sysstat
-    - iotop
-    - iftop
-    - python
-    - git
+    # - iotop
+    # - iftop
+    # - python
+    # - git
     - curl
   # Host DNS name
   dns_hostname: localhost
@@ -43,3 +43,5 @@ server_common_data:
   groups: []
 server_common_group: {}
 server_common_host: {}
+common_dns_server1: 8.8.8.8
+common_dns_server2: 1.1.1.1

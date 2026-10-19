@@ -1,3 +1,7 @@
+## Credits
+
+Based on the role by [sorrowless](https://github.com/sorrowless).
+
 # sbog/server_common
 
 Role to manage common server settings, like:
